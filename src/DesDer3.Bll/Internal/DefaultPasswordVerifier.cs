@@ -7,7 +7,7 @@ using DesDer3.Dal;
 using DesDer3.Dal.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace DesDer3.Dal.Internal;
+namespace DesDer3.Bll.Internal;
 internal class DefaultPasswordVerifier: IPasswordVerifier
 {
     private readonly IPasswordHasher<User> _passwordHasher;

@@ -1,7 +1,7 @@
 ﻿using DesDer3.Dal;
 using DesDer3.Dal.Models;
 
-namespace DesDer3.Dal;
+namespace DesDer3.Bll;
 
 /// <summary>
 /// The interface IPasswordVerifier should be implemented in the Presentation Layer; 

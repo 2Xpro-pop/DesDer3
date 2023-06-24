@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using DesDer3.Dal.EfIdentity;
 using DesDer3.Dal;
-using DesDer3.Dal.EfIdentity;
 using DesDer3.Dal.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
