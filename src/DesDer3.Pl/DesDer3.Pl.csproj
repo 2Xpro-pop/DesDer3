@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DesDer3.Bll.EfIdentity\DesDer3.Dal.EfIdentity.csproj" />
     <ProjectReference Include="..\DesDer3.Bll\DesDer3.Bll.csproj" />
     <ProjectReference Include="..\DesDer3.Dal.EfIdentity\DesDer3.Dal.EfIdentity.csproj" />
   </ItemGroup>

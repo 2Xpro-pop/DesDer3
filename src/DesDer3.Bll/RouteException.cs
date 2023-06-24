@@ -8,12 +8,12 @@ using DesDer3.Dal.Models;
 namespace DesDer3.Bll;
 public class RouteException : Exception
 {
-    public Route Route
+    public Route? Route
     {
         get;
     }
 
-    public RouteException(Route route, string message): base(message)
+    public RouteException(Route? route, string message): base(message)
     {
         Route = route;
     }

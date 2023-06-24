@@ -53,11 +53,11 @@ public class Post : Model
         get; set;
     } = null!;
 
-    public Guid RouteId
+    public Guid? RouteId
     {
         get; set;
     }
-    public virtual Route Route
+    public virtual Route? Route
     {
         get; set;
     }

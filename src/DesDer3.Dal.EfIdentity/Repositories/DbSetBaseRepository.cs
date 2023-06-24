@@ -21,13 +21,20 @@ internal class DbSetBaseRepository<T>: IRepository<T> where T : class
     }
 
     public async virtual Task AddAsync(T model) => await _set.AddAsync(model);
-    public async virtual Task DeleteAsync(T model) => _set.Remove(model);
+    public virtual Task DeleteAsync(T model)
+    {
+        _set.Remove(model);
+        return Task.CompletedTask;
+    }
+
     public async virtual Task<T?> FindByIdAsync(Guid id) => await _set.FindAsync(id);
     public async virtual Task<IEnumerable<T>> GetAllAsync() => await _set.ToArrayAsync();
-    public async virtual Task UpdateAsync(T model)
+    public virtual Task UpdateAsync(T model)
     {
         _context.Attach(model).State = EntityState.Modified;
+        return Task.CompletedTask;
     }
+
     public async virtual Task SaveAsync() => await _context.SaveChangesAsync();
 
 

@@ -17,11 +17,11 @@ internal class DefaultPasswordVerifier: IPasswordVerifier
         _passwordHasher = passwordHasher;
     }
 
-    public async Task<bool> VerifyPasswordAsync(User user, string hashedPassword, string password)
+    public Task<bool> VerifyPasswordAsync(User user, string hashedPassword, string password)
     {
         var result = _passwordHasher.VerifyHashedPassword(user, hashedPassword, password);
 
-        return (result == PasswordVerificationResult.Success) || 
-               (result == PasswordVerificationResult.SuccessRehashNeeded);
+        return Task.FromResult((result == PasswordVerificationResult.Success) || 
+               (result == PasswordVerificationResult.SuccessRehashNeeded));
     }
 }

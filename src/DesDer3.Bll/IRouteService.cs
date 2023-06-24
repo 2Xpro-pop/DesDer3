@@ -12,7 +12,7 @@ public interface IRouteService
     Task<Post?> GetPostByPathAsync(string path);
     Task<string?> GetPathByRouteAsync(Route route);
     Task<Route?> GetRouteByPathAsync(string path);
-    Task<Route> GetRootAsync();
+    Task<Route?> GetRootAsync();
     Task SaveRouteAsync(Route route);
     Task RemoveRouteAsync(Route route);
 
